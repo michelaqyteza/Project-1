@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe and Cocktail Generator</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Fonts Link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--JQuery UI Library added-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <!-- Custom CSS sytling sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>Cocktail & Recipe Generator</header>
+    <!--Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <!-- Modal Trigger -->
+                <button data-target="modal1" class="left btn modal-trigger">WELCOME! Start Here</button>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="center modal-content">
+                        <h4><u>How it Works!</u></h4>
+                        <p>Welcome to The Cocktail and Recipe Generator! Get fresh ideas for your next meal! Below you
+                            will discover
+                            a wide variety of randomized coktails and recipes
+                            for your enjoyment! All you have to do is choose your liquor and food of choice,
+                            and then a variety of drink selections and recipes will produce for you!</p>
+                        <p><u>Step 1</u> - Enter you liquor of choice (by letter) into the first search box. You will
+                            see a list
+                            generate which includes that ingredient. Highlight your choice and it will auto populate to
+                            the search
+                            coloum, and click "Search". </p>
+                        <p><u>Step 2</u> - Highlight you beverage of choice in the drop down box. It will also auto
+                            populate to the
+                            "Choose Your Beverage" search box. Click "Submit" and your cocktail recipe generates!</p>
+                        <p><u>Step 3</u> - Want to pair a meal with that cocktail? Search a food ingredient (by letter)
+                            in the
+                            "Search by Food Ingredient" box. You will also see a drop down of meal choices, so choose
+                            one and click
+                            "Search"!</p>
+                        <p><u>Step 4</u> - Finally, click on the meal you would like, and you will see it also auto
+                            populate to the
+                            "Choose Your Meal" search box. Click "Submit" and presto, you have a recipe to cook!</p>
+                        <p><u>Additional Options!</u> - If you change your mind, and would like the closest Restaurants
+                            and
+                            Breweries available, you have two buttons at the top of the screen which will help you make
+                            a different
+                            choice!</p>
+                        <p>
+                        <div id="closer">
+                            <h3>&#127837;Bon Appetit!&#127863;</h3>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Let's Go!</a>
+                    </div>
+                </div>
+                <li><a href="https://everyrestaurantinthecity.com/" class="Hyperlinks">Restaurant Locator</a></li>
+                <li><a href="https://www.craftbeer.com/breweries/find-a-us-brewery" class="Hyperlinks">Brewery
+                        Locator</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--Drink Generator-->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <h5><u>Choose Your Beverage</u></h5>
+                <div class="row">
+                    <div class="col s12 m6 l12">
+                        <div class="wrapper">
+                            <input type="text" id="myInput" placeholder="Search by Alcohol Ingredient"
+                                title="Type in a name">
+                            <ul id="myUL">
+                            </ul>
+                            <button id="Submit">SEARCH</button>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6 l12">
+                                <form>
+                                    <label for="exampleInputPassword1" class="form-label"></label>
+                                    <input type="text" class="form-control" id="input2"
+                                        placeholder="Choose Your Beverage">
+                                    <button type="submit" class="btn btn-primary" id="submit2">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <h4 id="makeDrink"></h4>
+                    <ul id="drinkNames"></ul>
+                    <p id="instructions"></p>
+                </div>
+            </div>
+
+            <!-- Meal Generator -->
+            <div class="col s12 m6 l6">
+                <h5><u>Choose Your Food</u></h5>
+                <div class="wrapper1">
+                    <input type="text" id="myInput2" placeholder="Search by Food Ingredient" title="Type in a name">
+                    <ul id="myUL2">
+                    </ul>
+                    <button id="Submit3">SEARCH</button>
+                    <form>
+                        <label for="exampleInputPassword1" class="form-label"></label>
+                        <input type="text" class="form-control" id="input3" placeholder="Choose Your Meal">
+                        <button type="submit" class="btn btn-primary" id="submit4">Submit</button>
+                </div>
+                </form>
+                <h4 id="makeMeal"></h4>
+                <ul id="mealNames"></ul>
+                <p id="instructionsMeal"></p>
+            </div>
+        </div>
+    </div>
+
+    <head>
+        <!-- jQuery UI <script> tag -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="script.js"></script>
+
+
+</body>
+
+</html>
