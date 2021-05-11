@@ -47,11 +47,11 @@ so that I can have them saved for future use.
         - Creating a user reset button, so the page does not have to be refreshed manually by the user after searching.
         - Updating media queries appropriatley, to create a better mobile experience.
 
-![image of webpage]()
+![image of webpage](https://github.com/michelaqyteza/Project-1/blob/main/homepage.png?raw=true)
 
 
 ## <u>Live Link to Deployed Page</u>
- https://adamspiegel.github.io/Group-Project-1/
+ https://michelaqyteza.github.io/Project-1/
 
 # Contact Information
 * Adam Spiegel GitHub - https://github.com/AdamSpiegel
